@@ -1,0 +1,23 @@
+{
+	"name": "cointopper-clone",
+	"version": "0.0.0",
+	"description": "Clone of www.contopper.com",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/pioneiro/cointopper.git"
+	},
+	"author": "Soumyajit Das",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/pioneiro/cointopper/issues"
+	},
+	"homepage": "https://github.com/pioneiro/cointopper#readme",
+	"dependencies": {
+		"ejs": "^3.1.5",
+		"express": "^4.17.1"
+	}
+}
