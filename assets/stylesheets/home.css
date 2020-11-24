@@ -111,7 +111,7 @@ html, body {
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    text-decoration: none;
 }
 
 .btn-page {
