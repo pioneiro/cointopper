@@ -1,3 +1,6 @@
+$('document').ready(function() {
+    $('html').css('visibility', 'visible');
+});
 $('#toggle-icon').click(function() {
     $('#navbar ul').toggleClass('toggle-view');
 });
