@@ -65,22 +65,135 @@
 						<h2 class="title">
 						Top Viewed
 						</h2>
-						<a href="#" class="btn btn-page">View All</a href="#">
+						<a href="#" class="btn bg-page">View All</a href="#">
 					</div>
 					<div class="row row-around">
 						<!-- Top Viewed Icons -->
-						<ul class="wrapper">
+						<ul class="top-wrapper">
 							<% for(var i=0; i<15; i++) { %>
 								<li>
-									<div class="top">
+									<a href="#" class="top">
 										<span class="top-name">CoinName</span>
 										<span class="top-value">$0000.00</span>
 										<span class="top-change">
-											<img src="/images/up.png" class="change-icon">
+											<img src="/images/equal-light.png" class="change-icon">
 											<span class="change-value">0.00%</span>
 										</span>
-										<img src="/images/top-icon.png" class="top-icon">
-									</div>
+										<img src="/images/btc-light.png" class="top-icon">
+									</a>
+								</li>
+							<% } %>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row row-between col-md">
+						<h2 class="title">
+							<!-- Title: Cryptocurrencies -->
+							Cryptocurrencies
+						</h2>
+						<div class="row row-between">
+							<input type="text" placeholder="Search Coin" class="btn bg-page">
+							<select name="currency" id="currency" class="btn bg-page">
+								<option value="AUD">AUD</option>
+								<option value="BRL">BRL</option>
+								<option value="CAD">CAD</option>
+								<option value="CNY">CNY</option>
+								<option value="EUR">EUR</option>
+								<option value="GBP">GBP</option>
+								<option value="HKD">HKD</option>
+								<option value="IDR">IDR</option>
+								<option value="INR">INR</option>
+								<option value="JPY">JPY</option>
+								<option value="KRW">KRW</option>
+								<option value="PLN">PLN</option>
+								<option value="RUB">RUB</option>
+								<option value="TRY">TRY</option>
+								<option value="USD" selected>USD</option>
+								<option value="ZAR">ZAR</option>
+							</select>
+						</div>
+					</div>
+					<div class="row row-between">
+						<table class="coin-table">
+							<thead>
+								<tr>
+									<th class="ctd">#</th>
+									<th class="ctd"></th>
+									<th class="ctd">Name</th>
+									<th class="ctd">Change</th>
+									<th class="ctd">Price</th>
+									<th class="ctd">24h Change</th>
+									<th class="ctd">Graph (7 Day)</th>
+									<th class="ctd">Coins</th>
+									<th class="ctd">Market Cap</th>
+								</tr>
+							</thead>
+							<tbody>
+								<% for(var i=1; i<=50; i++) { %>
+									<% if(i!=1) { %>
+										<tr class="hr"><td colspan="9"></td></tr> 
+									<% } %> 
+									<tr class="coinrow">
+										<td class="ctd"><%= i %></td>
+										<td class="ctd">
+											<img class="coinicon" src="/images/btc.png">
+										</td>
+										<td class="ctd">
+											<div class="coinname">CoinName</div>
+											<div class="coinabbr">CN</div>
+										</td>
+										<td class="ctd">
+											<img src="" class="change-ico">
+											<div class="change-val"><img src="/images/equal.png">0.00%</div>
+										</td>
+										<td class="ctd">
+											<div class="price">$0000.00</div>
+											<div class="bitval"><img src="/images/btc.png">0.00000000</div>
+										</td>
+										<td class="ctd">
+											<div class="ul"><img src="/images/up.png">$0000</div>
+											<div class="ll"><img src="/images/down.png">$0000</div>
+										</td>
+										<td class="ctd">
+											<canvas></canvas>
+										</td>
+										<td class="ctd">
+											<div class="coins">000.00 M</div>
+										</td>
+										<td class="ctd">
+											<div class="mcap">$000.00B</div>
+										</td>
+									</tr>
+								<% } %> 
+							</tbody>
+						</table>
+					</div>
+					<div class="row row-center">
+						<span class="page">
+							<a href="#" class="btn bg-light-border"><< Previous</a>
+							<a href="#" class="btn bg-light-border">Next >></a>
+						</span>
+					</div>
+				</div>
+				<div class="col">
+					<div class="row row-between">
+						<!-- Title: News -->
+						<h2 class="title">NEWS</h2>
+						<a href="#" class="btn bg-page">View All</a href="#">
+					</div>
+					<div class="row row-around">
+						<!-- News Tiles -->
+						<ul class="news-wrapper">
+							<% for(var i=0; i<6; i++) { %>
+								<li>
+									<a href="#" class="news">
+										<span class="news-fig">
+											<img>
+											<span class="news-headline">Another Game Changing News</span>
+											<span class="datestamp">November 26, 2020</span>
+										</span>
+									</a>
 								</li>
 							<% } %>
 						</ul>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-html { visibility: hidden; }
+html { display: none; }
 
 html, body {
     margin: 0;
@@ -87,19 +87,16 @@ html, body {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
-    width: 100%;
 }
 
-.row-around {
-    justify-content: space-evenly;
-}
+.row-center { justify-content: center; }
+.row-around { justify-content: space-evenly; }
+.row-between { justify-content: space-between; }
 
-.row-between {
-    justify-content: space-between;
-}
+.row .row { margin-top: 20px; }
 
 .title {
-    margin: 0;
+    margin: 0 10px;
     font-size: 2rem;
     font-weight: 500;
     opacity: 0.7;
@@ -109,19 +106,26 @@ html, body {
     align-self: center;
     padding: 7.5px 15px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 500;
     box-sizing: border-box;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
+    margin: 0 5px;
 }
 
-.btn-page {
+.bg-page {
     color: #f1e6ff;
     background-image: linear-gradient(to right, #5100ad, #a04dff);
 }
 
-.wrapper, .wrapper li {
+.bg-light-border {
+    color: #5100ad;
+    background-color: transparent;
+    border: 2px solid #5100ad;
+}
+
+.top-wrapper, .top-wrapper li {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -130,9 +134,10 @@ html, body {
 
 .top {
     height: 70px;
-    margin: 7px;
+    margin: 5px;
     border-radius: 20px;
     padding: 7px 14px;
+    text-decoration: none;
     background-image: linear-gradient(to right, #5100ad, #a04dff);
     display: flex;
     flex-direction: column;
@@ -152,7 +157,6 @@ html, body {
 
 .top-change {
     display: flex;
-    /* align-items: center; */
 }
 
 .top-change .change-icon {
@@ -176,6 +180,122 @@ html, body {
     
 }
 
+::placeholder {
+    color: #f1e6ff;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-align-last: center;
+}
+
+select option {
+    color: #0c001a;
+}
+
+.coin-table { font-size: 1.05rem; width: 100%; color: #3c0080; }
+
+.ctd { text-align: left; }
+.hr { height: 1px; background-image: linear-gradient(to right, white 5%, #3c008050 50%, white 95%); }
+
+.ctd:nth-child(1) { width: 2.5%; text-align: center; }
+.ctd:nth-child(2) { width: 4%; text-align: center; }
+.ctd:nth-child(3) { width: 17.5%; text-align: left; }
+.ctd:nth-child(4) { width: 12%; text-align: left; }
+.ctd:nth-child(5) { width: 14%; text-align: left; }
+.ctd:nth-child(6) { width: 12%; text-align: left; }
+.ctd:nth-child(7) { width: 17%; text-align: left; }
+.ctd:nth-child(8) { width: 10%; text-align: left; }
+.ctd:nth-child(9) { width: 11%; text-align: right; }
+
+th.ctd { font-size: 0.75rem; font-weight: 500; text-transform: uppercase; }
+
+td.ctd:first-child { color: #0c001a; opacity: 0.4; }
+
+.coinicon { height: 30px; }
+
+.coinname { font-size: 1rem; font-weight: 800; }
+.coinabbr { font-weight: 400; color: #0c001a; opacity: 0.6; }
+
+.ctd canvas {width: 100%; }
+
+.change-val img { height: 24px; position: relative; top: 6px; }
+
+.bitval { font-size: 0.9rem; color: #0c001a; opacity: 0.6; }
+.bitval img {
+    height: 16px;
+    opacity: 0.6;
+    margin-right: 1px;
+    position: relative;
+    top: 2.5px;
+}
+
+.ul img, .ll img { height: 16px; }
+
+.page { margin: 7vh 0; }
+.page a:hover { background-color: #f1e6ff; }
+
+.news-wrapper, .news-wrapper li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.news { text-decoration: none; }
+
+.news-fig {
+    height: 40vh;
+    color: #3c0080;
+    border: 2px solid #0c001a;
+    border-radius: 20px;
+    padding: 0;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+
+.news-fig img {
+    margin: 0;
+    width: 100%;
+    height: 25vh;
+    box-sizing: border-box;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #5100ad;
+    background-image: linear-gradient(45deg, #5100ad, #c999ff);
+    background-image: url(https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/SKD-bqAkQjhvrjayf/videoblocks-news-intro-graphic-animation-with-grid-and-world-map-abstract-background-elegant-and-luxury-dynamic-style-for-news-and-business-template_ry_hdemhl_thumbnail-180_01.jpg);
+    background-position: left;
+    background-size: cover;
+}
+
+.news-headline {
+    margin: 2vh 3vh;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.datestamp {
+    color: #0c001a;
+    opacity: 0.5;
+    font-size: 0.8rem;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+/* .coinrow { transition: .3s; }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-image: linear-gradient(white 60%, transparent);
+} */
+
 /* Extra large devices  ->  1200px  -   ..... */
 
 
@@ -197,6 +317,19 @@ html, body {
     #navbar li a{
         font-size: 0.8em;
     }    
+
+    .col-md { flex-direction: column; }
+
+    .col-md input { flex-basis: 70%; }
+    .col-md select { flex-basis: 30%; }
+
+    .coin-table { font-size: 0.85rem; }
+    
+    th.ctd { font-size: 0.7rem; }
+    
+    .coinname { font-size: 0.95rem; }
+    
+    .bitval { font-size: 0.8rem; }
 }
 
 /* Small devices        ->  600px   -   768px */
@@ -266,13 +399,28 @@ html, body {
         background-color: #5100ad;
     }
 
-    .toggle-view {
-        display: flex!important;
-    }
+    .toggle-view { display: flex!important; }
 
-    .title {
-        font-size: 1.5rem;
-    }
+    .title { font-size: 1.5rem; }
+    
+    .coin-table { font-size: 0.75rem; }
+
+    .coinrow { height: 65px; }
+
+    .ctd:nth-child(1) { width: 4%; }
+    .ctd:nth-child(2) { width: 8%; }
+    .ctd:nth-child(3) { width: 32%; }
+    .ctd:nth-child(4) { width: 25%; }
+    .ctd:nth-child(5) { width: 31%; }
+    .ctd:nth-child(n+6) { display: none; }
+
+    th.ctd { font-size: 0.65rem; }
+
+    .coinname { font-size: 0.85rem; }
+
+    .bitval { font-size: 0.75rem; }
+
+    .news-fig { margin: 0; }
 }
 
 /* Extra small devices  ->  .....   -   600px */
