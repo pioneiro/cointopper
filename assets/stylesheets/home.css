@@ -420,7 +420,7 @@ td.ctd:first-child { color: #0c001a; opacity: 0.4; }
 
     .bitval { font-size: 0.75rem; }
 
-    .news-fig { margin: 0; }
+    .news-fig { margin: 0 5px; }
 }
 
 /* Extra small devices  ->  .....   -   600px */

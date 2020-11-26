@@ -9,7 +9,7 @@ $('document').ready(function() {
     $('.top-wrapper').slick({
         dots: true,
         arrows: false,
-        infinite: false,
+        infinite: true,
         speed: 300,
         slidesToShow: 6,
         slidesToScroll: 3,
@@ -35,7 +35,7 @@ $('document').ready(function() {
     $('.news-wrapper').slick({
         dots: true,
         arrows: false,
-        infinite: false,
+        infinite: true,
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 3,
