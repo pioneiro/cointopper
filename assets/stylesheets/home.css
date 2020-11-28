@@ -74,6 +74,8 @@ html, body {
     padding: 0 3vw;
 }
 
+.container ::placeholder { color: #f1e6ff; }
+
 .col {
     display: flex;
     flex-direction: column;
@@ -174,10 +176,6 @@ html, body {
     border: 3px solid;
     border-radius: 30px;
     
-}
-
-::placeholder {
-    color: #f1e6ff;
 }
 
 select {
@@ -396,11 +394,10 @@ footer {
 }
 
 .newsletter button img { height: -webkit-fill-available; }
+.newsletter ::placeholder { color: white; }
 
 .downloads { flex-basis: 40%; display: flex; }
-
 .downloads a { flex-basis: 50%; }
-
 .downloads img { height: 40px; margin-top: 10px; }
 
 .footer-news {
